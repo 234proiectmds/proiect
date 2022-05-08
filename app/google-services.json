@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "669292043862",
+    "project_id": "cakedelivery-2201f",
+    "storage_bucket": "cakedelivery-2201f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:669292043862:android:10a1a12adfed3d1786a5f7",
+        "android_client_info": {
+          "package_name": "com.example.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "669292043862-kkudm5k94jkn1ebrtrm3ue58plqupqnu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2S59ZZP67PtnoszRKbpfiFbg3WXLV30M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "669292043862-kkudm5k94jkn1ebrtrm3ue58plqupqnu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

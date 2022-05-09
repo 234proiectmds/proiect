@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Stefi/AndroidStudioProjects/Cakes/app/src/main/res/drawable/background_shape.xml" value="0.1" />
+        <entry key="..\:/Users/Stefi/AndroidStudioProjects/Cakes/app/src/main/res/drawable/butonblue.xml" value="0.1" />
+        <entry key="..\:/Users/Stefi/AndroidStudioProjects/Cakes/app/src/main/res/drawable/butonred.xml" value="0.1" />
+        <entry key="..\:/Users/Stefi/AndroidStudioProjects/Cakes/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/Stefi/AndroidStudioProjects/Cakes/app/src/main/res/layout/activity_main_menu.xml" value="0.3546875" />
+        <entry key="..\:/Users/Stefi/AndroidStudioProjects/Cakes/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1545" />
+        <entry key="..\:/Users/Stefi/AndroidStudioProjects/Cakes/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2115" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

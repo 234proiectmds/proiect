@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Cakes">
         <activity
+            android:name=".ChooseOne"
+            android:exported="false" />
+        <activity
             android:name=".MainMenu"
             android:exported="false" />
 

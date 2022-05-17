@@ -10,6 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Cakes">
         <activity
+            android:name=".ClientRegistration"
+            android:exported="false" />
+        <activity
+            android:name=".ClientLoginphone"
+            android:exported="false" />
+        <activity
+            android:name=".ClientLoginemail"
+            android:exported="false" />
+        <activity
+            android:name=".AdminRegistration"
+            android:exported="false" />
+        <activity
+            android:name=".AdminLoginphone"
+            android:exported="false" />
+        <activity
+            android:name=".AdminLoginemail"
+            android:exported="false" />
+        <activity
             android:name=".ChooseOne"
             android:exported="false" />
         <activity

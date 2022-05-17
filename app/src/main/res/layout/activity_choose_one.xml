@@ -34,7 +34,7 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/admin"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -44,7 +44,7 @@
             app:backgroundTint="#050E50" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/client"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

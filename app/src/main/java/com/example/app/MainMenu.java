@@ -43,6 +43,8 @@ public class MainMenu extends AppCompatActivity {
             }
         });
         signinemail=(Button)findViewById(R.id.signInwithEmail);
+        signinphone=(Button)findViewById(R.id.signInwithPhone);
+        signup=(Button)findViewById(R.id.LogIn);
         signinemail.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
@@ -52,6 +54,24 @@ public class MainMenu extends AppCompatActivity {
                  finish();
              }
          });
+        signinphone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent signPhone = new Intent(MainMenu.this, ChooseOne.class);
+                signPhone.putExtra("Home", "Phone");
+                startActivity(signPhone);
+                finish();
+            }
+        });
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent logIn = new Intent(MainMenu.this, ChooseOne.class);
+                logIn.putExtra("Home", "LogIn");
+                startActivity(logIn);
+                finish();
+            }
+        });
 
 
     }

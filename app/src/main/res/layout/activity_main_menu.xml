@@ -53,36 +53,36 @@
 
         <Button
             android:id="@+id/signInwithEmail"
-            android:layout_width="232dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/butonred"
+            android:layout_marginTop="10dp"
+            android:background="#1E0635"
             android:drawableLeft="@drawable/whitemail"
-            android:gravity="center"
+            android:gravity="center_horizontal|center_vertical"
             android:padding="10dp"
-            android:text="Sign in with Email" />
+            android:text="LOGIN CU ADRESA DE EMAIL"
+            app:backgroundTint="#1E0635" />
 
         <Button
             android:id="@+id/signInwithPhone"
-            android:layout_width="229dp"
-            android:layout_height="49dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/butonblue"
+            android:layout_marginTop="20dp"
+            android:background="#1E0635"
             android:drawableLeft="@drawable/whitephone"
             android:gravity="center"
-            android:paddingLeft="10dp"
-            android:text="Sign In with Phone"
+            android:padding="10dp"
+            android:text="LOGIN CU NUMARUL DE TELEFON"
             android:textColor="#FAFAFA"
+            app:backgroundTint="#1E0635"
             tools:ignore="TextContrastCheck" />
 
         <LinearLayout
-            android:layout_width="237dp"
-            android:layout_height="44dp"
-            android:layout_gravity="left"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="7dp"
-            android:gravity="clip_horizontal|left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
             <TableRow
@@ -98,8 +98,8 @@
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="7dp"
-                android:text="OR"
+                android:layout_margin="10dp"
+                android:text="SAU"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="17dp" />
@@ -119,8 +119,10 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/buton_shape"
-            android:text="Log In" />
+            android:layout_marginTop="10dp"
+            android:background="#7A5EBC"
+            android:text="INREGISTREAZA-TE"
+            app:backgroundTint="#7A5EBC" />
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -67,7 +67,7 @@ public class MainMenu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent logIn = new Intent(MainMenu.this, ChooseOne.class);
-                logIn.putExtra("Home", "LogIn");
+                logIn.putExtra("Home", "SignUp");
                 startActivity(logIn);
                 finish();
             }

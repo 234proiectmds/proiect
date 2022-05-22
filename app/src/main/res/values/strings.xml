@@ -3,5 +3,24 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-
+    <string-array name="Judete">
+        <item>Bucuresti - S1</item>
+        <item>Bucuresti - S2</item>
+        <item>Bucuresti - S3</item>
+        <item>Bucuresti - S4</item>
+        <item>Bucuresti - S5</item>
+        <item>Bucuresti - S6</item>
+        <item>Ilfov</item>
+    </string-array>
+    <string-array name="Orase">
+        <item>Bucuresti</item>
+        <item>Voluntari</item>
+        <item>Pantelimon</item>
+        <item>Buftea</item>
+        <item>Popesti-Leordeni</item>
+        <item>Bragadiru</item>
+        <item>Chitila</item>
+        <item>Otopeni</item>
+        <item>Magurele</item>
+    </string-array>
 </resources>

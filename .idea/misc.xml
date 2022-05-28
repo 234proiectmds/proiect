@@ -4,10 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/layout/activity_admin_login.xml" value="0.12318840579710146" />
-        <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/layout/activity_admin_loginemail.xml" value="0.1" />
+        <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/layout/activity_admin_loginemail.xml" value="0.33" />
         <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/layout/activity_admin_loginphone.xml" value="0.25" />
-        <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/layout/activity_admin_registration.xml" value="0.24592391304347827" />
-        <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/layout/activity_client_loginemail.xml" value="0.12318840579710146" />
+        <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/layout/activity_admin_registration.xml" value="0.1" />
+        <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/layout/activity_client_loginemail.xml" value="0.22" />
+        <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/layout/activity_client_loginphone.xml" value="0.2942708333333333" />
         <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/layout/activity_client_registration.xml" value="0.24592391304347827" />
         <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/layout/layout.xml" value="0.12318840579710146" />
         <entry key="..\:/Users/Andreea/Desktop/proiectMDS/proiect/app/src/main/res/drawable/buton_shape.xml" value="0.1215" />

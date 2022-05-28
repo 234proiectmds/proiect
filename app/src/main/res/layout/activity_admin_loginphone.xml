@@ -9,17 +9,18 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="331dp"
-        android:layout_height="320dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="180dp"
+        android:layout_width="351dp"
+        android:layout_height="310dp"
         android:background="@drawable/background_shape"
         android:orientation="vertical"
         android:padding="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.125"
+        app:layout_goneMarginTop="0dp">
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/nrtelefon"
@@ -36,7 +37,7 @@
 
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/logintelefon"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="20dp"
@@ -87,7 +88,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/logintelefon"
+            android:id="@+id/loginmail"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="20dp"

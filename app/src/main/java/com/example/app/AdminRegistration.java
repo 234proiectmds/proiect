@@ -177,12 +177,11 @@ public class AdminRegistration extends AppCompatActivity {
             }
         });
 
-
     }
 
             String emailPattern = "[a-zA-Z0-9._]+@[a-z]+\\.+[a-z]+";
-            String lastNamePattern = "[A-Za-z]";
-            String firstNamePattern = "[A-Za-z]+\\.+[-A-Za-z]+";
+            String lastNamePattern = "([A-Z][a-z]*)([\\s\\\'-][A-Z][a-z]*)*";
+            String firstNamePattern = "([A-Z][a-z]*)([\\s\\\'-][A-Z][a-z]*)*";
 
             public boolean isValid(){
                 Email.setErrorEnabled(false);

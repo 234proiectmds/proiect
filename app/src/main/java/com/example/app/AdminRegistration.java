@@ -90,17 +90,17 @@ public class AdminRegistration extends AppCompatActivity {
         FAuth = FirebaseAuth.getInstance();
 
         signUp.setOnClickListener(v -> {
-            firstName = FirstName.getEditText().toString().trim();
-            lastName = LastName.getEditText().toString().trim();
-            email = Email.getEditText().toString().trim();
-            password = Password.getEditText().toString().trim();
-            confirmPassword = ConfirmPassword.getEditText().toString().trim();
-            mobile = Mobile.getEditText().toString().trim();
+            firstName = FirstName.getEditText().getText().toString().trim();
+            lastName = LastName.getEditText().getText().toString().trim();
+            email = Email.getEditText().getText().toString().trim();
+            password = Password.getEditText().getText().toString().trim();
+            confirmPassword = ConfirmPassword.getEditText().getText().toString().trim();
+            mobile = Mobile.getEditText().getText().toString().trim();
 
-            street = Street.getEditText().toString().trim();
-            streetNumber = StreetNumber.getEditText().toString().trim();
-            detailsAddress = DetailsAddress.getEditText().toString().trim();
-            zipCode = ZipCode.getEditText().toString().trim();
+            street = Street.getEditText().getText().toString().trim();
+            streetNumber = StreetNumber.getEditText().getText().toString().trim();
+            detailsAddress = DetailsAddress.getEditText().getText().toString().trim();
+            zipCode = ZipCode.getEditText().getText().toString().trim();
 
 
             if(isValid()){

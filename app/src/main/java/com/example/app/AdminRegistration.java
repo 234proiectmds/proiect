@@ -129,7 +129,7 @@ public class AdminRegistration extends AppCompatActivity {
                                     userMap1.put("Confirmare Parola",confirmPassword);
                                     userMap1.put("Mobil",mobile);
                                     userMap1.put("Strada",street);
-                                    userMap1.put("Nr. strada",streetNumber);
+                                    userMap1.put("Nr strada",streetNumber);
                                     userMap1.put("Detalii adresa",detailsAddress);
                                     userMap1.put("Cod postal",zipCode);
 

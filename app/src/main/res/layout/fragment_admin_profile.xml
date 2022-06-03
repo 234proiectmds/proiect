@@ -7,4 +7,17 @@
     android:id="@+id/back1"
     >
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/creaza_tort"
+        android:background="@color/defaultColor"
+        android:text="Creaza tort"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="65dp"
+        android:shadowColor="@color/Black"
+        android:shadowRadius="10"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

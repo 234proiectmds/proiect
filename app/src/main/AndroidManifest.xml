@@ -12,6 +12,9 @@
         android:theme="@style/Theme.Cakes"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".adminCakesPanel.admin_creazaTort"
+            android:exported="false" />
+        <activity
             android:name=".ClientForgotPassword"
             android:exported="false" />
         <activity

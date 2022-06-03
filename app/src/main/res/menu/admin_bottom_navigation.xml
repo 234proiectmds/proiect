@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+         android:id="@+id/adminHome"
+         android:icon="@drawable/ic_baseline_home_24"
+         android:title="Acasa"/>
+    <item
+        android:id="@+id/pendingOrders"
+        android:icon="@drawable/ic_baseline_cake_24"
+        android:title="Comenzi in asteptare"/>
+    <item
+        android:id="@+id/Orders"
+        android:icon="@drawable/ic_orders_24"
+        android:title="Comenzi"/>
+    <item
+        android:id="@+id/adminProfile"
+        android:icon="@drawable/ic_post_dish_24"
+        android:title="Posteaza tort"/>
+</menu>

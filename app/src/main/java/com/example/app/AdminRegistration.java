@@ -174,10 +174,28 @@ public class AdminRegistration extends AppCompatActivity {
                             });
 
 
+                        }else{
+                            mDialog.dismiss();
+                            AlertForAll.ShowAlert(AdminRegistration.this,"Error",task.getException().getMessage());
                         }
                     }
                 });
 
+            }
+        });
+
+        emaill.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AdminRegistration.this, AdminLoginemail.class));
+                finish();
+            }
+        });
+        phone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AdminRegistration.this, AdminLoginphone.class));
+                finish();
             }
         });
 

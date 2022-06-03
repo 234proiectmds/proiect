@@ -73,7 +73,7 @@
             app:backgroundTint="#7A5EBC" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/signIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

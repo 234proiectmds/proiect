@@ -64,6 +64,10 @@ public class MainActivity extends AppCompatActivity {
                                     startActivity(new Intent(MainActivity.this,AdminCakes_Navigation.class));
                                     finish();
                                 }
+                                if(role.equals("Client")){
+                                    startActivity(new Intent(MainActivity.this,ClientCakes_Navigation.class));
+                                    finish();
+                                }
                             }
 
                             @Override

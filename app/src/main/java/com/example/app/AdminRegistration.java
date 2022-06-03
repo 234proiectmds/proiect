@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -152,7 +153,10 @@ public class AdminRegistration extends AppCompatActivity {
                                                                     public void onClick(DialogInterface dialog, int which) {
 
                                                                         dialog.dismiss();
-
+                                                                        String phonenumber = "+40"+ mobile;
+                                                                        Intent b = new Intent(AdminRegistration.this,AdminVerifyPhone.class);
+                                                                        b.putExtra("phonenumber",phonenumber);
+                                                                        startActivity(b);
                                                                     }
                                                                 });
                                                                 AlertDialog Alert = builder.create();

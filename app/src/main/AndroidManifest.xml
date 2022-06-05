@@ -3,6 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.app">
 
+
+    <permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <permission
+        android:name="android.permission.CAMERA"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,6 +19,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Cakes"
         android:usesCleartextTraffic="true">
+
+        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat"
+            android:exported="true"/>
+
+        <activity
+            android:name=".adminCakesPanel.admin_creazaTort"
+            android:exported="true" />
         <activity
             android:name=".ClientForgotPassword"
             android:exported="false" />

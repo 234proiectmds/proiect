@@ -23,4 +23,9 @@
         <item>Otopeni</item>
         <item>Magurele</item>
     </string-array>
+    <string-array name="Torturi">
+        <item>Diplomat</item>
+        <item>Amandina</item>
+        <item>Mousse Ciocolata</item>
+    </string-array>
 </resources>

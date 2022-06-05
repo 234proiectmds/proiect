@@ -2,71 +2,71 @@ package com.example.app.adminCakesPanel;
 
 public class DetaliiTorturi {
 
-    public String Torturi, Cantitate, Pret, Descriere, ImageURL, RandomUID, AdminID;
+    public String torturi, cantitate, pret, descriere, imageURL, randomUID, admID;
 
-    public DetaliiTorturi(String torturi, String cantitate, String pret, String descriere, String imageURL, String randomUID, String adminID) {
-        Torturi = torturi;
-        Cantitate = cantitate;
-        Pret = pret;
-        Descriere = descriere;
-        ImageURL = imageURL;
-        RandomUID = randomUID;
-        AdminID = adminID;
+    public DetaliiTorturi(String torturi, String cantitate, String pret, String descriere, String imageURL, String randomUID, String adminId) {
+        torturi = torturi;
+        cantitate = cantitate;
+        pret = pret;
+        descriere = descriere;
+        imageURL = imageURL;
+        randomUID = randomUID;
+        this.admID = adminId;
     }
 
     public String getTorturi() {
-        return Torturi;
+        return torturi;
     }
 
     public void setTorturi(String torturi) {
-        Torturi = torturi;
+        torturi = torturi;
     }
 
     public String getCantitate() {
-        return Cantitate;
+        return cantitate;
     }
 
     public void setCantitate(String cantitate) {
-        Cantitate = cantitate;
+        cantitate = cantitate;
     }
 
     public String getPret() {
-        return Pret;
+        return pret;
     }
 
     public void setPret(String pret) {
-        Pret = pret;
+        pret = pret;
     }
 
     public String getDescriere() {
-        return Descriere;
+        return descriere;
     }
 
     public void setDescriere(String descriere) {
-        Descriere = descriere;
+        descriere = descriere;
     }
 
     public String getImageURL() {
-        return ImageURL;
+        return imageURL;
     }
 
     public void setImageURL(String imageURL) {
-        ImageURL = imageURL;
+        imageURL = imageURL;
     }
 
     public String getRandomUID() {
-        return RandomUID;
+        return randomUID;
     }
 
     public void setRandomUID(String randomUID) {
-        RandomUID = randomUID;
+        randomUID = randomUID;
     }
 
-    public String getAdminID() {
-        return AdminID;
+    public String getAdmID() {
+        return admID;
     }
 
-    public void setAdminID(String adminID) {
-        AdminID = adminID;
+    public void setAdmID(String adminID) {
+        admID = adminID;
     }
 }

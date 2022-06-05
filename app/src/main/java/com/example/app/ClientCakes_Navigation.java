@@ -3,6 +3,8 @@ package com.example.app;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -22,7 +24,28 @@ public class ClientCakes_Navigation extends AppCompatActivity implements BottomN
         setContentView(R.layout.activity_client_cakes_navigation);
         BottomNavigationView navigationView = findViewById(R.id.client_bottom_navigation);
         navigationView.setOnNavigationItemSelectedListener(this);
+        String name = getIntent().getStringExtra("PAGE");
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        if (name != null){
+            if (name.equalsIgnoreCase("Homepage")){
+                loadClientFragment(new ClientHomeFragment());
+            }
+            else if (name.equalsIgnoreCase("PreparingPage")){
+                loadClientFragment(new ClientTrackFragment());
+            }
+            else if (name.equalsIgnoreCase("DeliveryOrderPage")){
+                loadClientFragment(new ClientTrackFragment());
+            }
+            else if (name.equalsIgnoreCase("ThankYouPage")){
+                loadClientFragment(new ClientHomeFragment());
+            }
+        }
+        else {
+            loadClientFragment(new ClientHomeFragment());
+        }
     }
+
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {

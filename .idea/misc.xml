@@ -3,26 +3,32 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/layout/activity_admin_cakes_navigation.xml" value="0.371875" />
+        <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/layout/activity_admin_cakes_navigation.xml" value="0.22" />
+        <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/layout/activity_admin_creaza_tort.xml" value="0.371875" />
         <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/layout/activity_admin_login.xml" value="0.12318840579710146" />
         <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/layout/activity_admin_loginemail.xml" value="0.1" />
         <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/layout/activity_admin_loginphone.xml" value="0.25" />
         <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/layout/activity_admin_registration.xml" value="0.1" />
+        <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/layout/activity_choose_one.xml" value="0.371875" />
         <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/layout/activity_client_cakes_navigation.xml" value="0.371875" />
         <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/layout/activity_client_loginemail.xml" value="0.22" />
         <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/layout/activity_client_loginphone.xml" value="0.2942708333333333" />
         <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/layout/activity_client_registration.xml" value="0.24592391304347827" />
-        <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/layout/fragment_admin_home.xml" value="0.371875" />
+        <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/layout/activity_main.xml" value="0.20425724637681159" />
+        <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/layout/activity_main_menu.xml" value="0.20425724637681159" />
+        <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/layout/client_menucake.xml" value="0.371875" />
+        <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/layout/fragment_admin_home.xml" value="0.18" />
         <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/layout/fragment_admin_orders.xml" value="0.371875" />
         <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/layout/fragment_admin_pendingorders.xml" value="0.371875" />
         <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/layout/fragment_client_cart.xml" value="0.371875" />
-        <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/layout/fragment_client_home.xml" value="0.371875" />
+        <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/layout/fragment_client_home.xml" value="0.2" />
         <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/layout/fragment_client_orders.xml" value="0.371875" />
         <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/layout/fragment_client_profile.xml" value="0.371875" />
         <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/layout/fragment_client_track.xml" value="0.371875" />
         <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/layout/layout.xml" value="0.12318840579710146" />
         <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/menu/admin_bottom_navigation.xml" value="0.19166666666666668" />
         <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/menu/client_bottom_navigation.xml" value="0.19166666666666668" />
+        <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/menu/logout.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/Andreea/Desktop/proiectMDS/proiect/app/src/main/res/drawable/buton_shape.xml" value="0.1215" />
         <entry key="..\:/Users/Andreea/Desktop/proiectMDS/proiect/app/src/main/res/drawable/butonred.xml" value="0.1215" />
         <entry key="..\:/Users/Andreea/Desktop/proiectMDS/proiect/app/src/main/res/layout/activity_admin_loginemail.xml" value="0.21403508771929824" />

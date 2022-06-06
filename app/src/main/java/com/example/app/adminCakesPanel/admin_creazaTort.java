@@ -138,7 +138,7 @@ public class admin_creazaTort extends AppCompatActivity {
                             DetaliiTorturi info = new DetaliiTorturi(torturi, cantitate, pret,
                                     descriere, String.valueOf(uri), randomUID, adminId);
                             firebaseDatabase.getInstance().getReference("DetaliiTorturi")
-                                    .child(judet).child(oras).child(FirebaseAuth.getInstance()
+                                    .child(FirebaseAuth.getInstance()
                                     .getCurrentUser().getUid()).child(randomUID).
                                     setValue(info).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
@@ -222,10 +222,11 @@ public class admin_creazaTort extends AppCompatActivity {
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        if(mcropimageuri != null && grantResults.length > 0
-                && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (mcropimageuri != null && grantResults.length > 0
+                && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
             startCropImageActivity(mcropimageuri);
-        }else{
+        } else {
             Toast.makeText(this, "Operatie anulata! A fost refuzat accesul.",
                     Toast.LENGTH_SHORT).show();
         }

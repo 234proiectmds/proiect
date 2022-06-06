@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/clientHome"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Acasa"/>
+    <item
+        android:id="@+id/clientCart"
+        android:icon="@drawable/ic_baseline_cake_24"
+        android:title="Cos"/>
+    <item
+        android:id="@+id/clientOrders"
+        android:icon="@drawable/ic_orders_24"
+        android:title="Comenzi"/>
+    <item
+        android:id="@+id/clientTrack"
+        android:icon="@drawable/ic_baseline_access_time_24"
+        android:title="Urmareste"/>
+    <item
+        android:id="@+id/clientProfile"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="Profil"/>
+</menu>

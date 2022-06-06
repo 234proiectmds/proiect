@@ -21,6 +21,24 @@ public class AdminCakes_Navigation extends AppCompatActivity implements BottomNa
         setContentView(R.layout.activity_admin_cakes_navigation);
         BottomNavigationView navigationView = findViewById(R.id.admin_bottom_navigation);
         navigationView.setOnNavigationItemSelectedListener(this);
+        String name = getIntent().getStringExtra("PAGE");
+        if (name != null){
+            if (name.equalsIgnoreCase("orderPage")){
+                loadAdminFragment(new AdminPendingOrdersFragment());
+            }
+            else if (name.equalsIgnoreCase("confirmPage")){
+                loadAdminFragment(new AdminOrderFragment());
+            }
+            else if (name.equalsIgnoreCase("acceptOrderPage")){
+                loadAdminFragment(new AdminOrderFragment());
+            }
+            else if (name.equalsIgnoreCase("deliveredPage")){
+                loadAdminFragment(new AdminOrderFragment());
+            }
+        }
+        else {
+            loadAdminFragment(new AdminHomeFragment());
+        }
 
     }
 

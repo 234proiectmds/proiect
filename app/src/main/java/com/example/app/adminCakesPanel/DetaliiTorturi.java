@@ -5,12 +5,12 @@ public class DetaliiTorturi {
     public String torturi, cantitate, pret, descriere, imageURL, randomUID, admID;
 
     public DetaliiTorturi(String torturi, String cantitate, String pret, String descriere, String imageURL, String randomUID, String adminId) {
-        torturi = torturi;
-        cantitate = cantitate;
-        pret = pret;
-        descriere = descriere;
-        imageURL = imageURL;
-        randomUID = randomUID;
+        this.torturi = torturi;
+        this.cantitate = cantitate;
+        this.pret = pret;
+        this.descriere = descriere;
+        this.imageURL = imageURL;
+        this.randomUID = randomUID;
         this.admID = adminId;
     }
 

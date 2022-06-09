@@ -1,49 +1,41 @@
 package com.example.app;
 
 public class UpdateCakeModel {
-    String cakes, randomUID, description, quantity, price, imageURL, adminID;
-
+    public String torturi, cantitate, pret, descriere, imageURL, randomUID, admID;
     public UpdateCakeModel(){
 
     }
-    public String getCakes() {
-        return cakes;
+
+    public String getTorturi() {
+        return torturi;
     }
 
-    public void setCakes(String cakes) {
-        this.cakes = cakes;
+    public void setTorturi(String torturi) {
+        this.torturi = torturi;
     }
 
-    public String getRandomUID() {
-        return randomUID;
+    public String getCantitate() {
+        return cantitate;
     }
 
-    public void setRandomUID(String randomUID) {
-        this.randomUID = randomUID;
+    public void setCantitate(String cantitate) {
+        this.cantitate = cantitate;
     }
 
-    public String getDescription() {
-        return description;
+    public String getPret() {
+        return pret;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setPret(String pret) {
+        this.pret = pret;
     }
 
-    public String getQuantity() {
-        return quantity;
+    public String getDescriere() {
+        return descriere;
     }
 
-    public void setQuantity(String quantity) {
-        this.quantity = quantity;
-    }
-
-    public String getPrice() {
-        return price;
-    }
-
-    public void setPrice(String price) {
-        this.price = price;
+    public void setDescriere(String descriere) {
+        this.descriere = descriere;
     }
 
     public String getImageURL() {
@@ -54,11 +46,19 @@ public class UpdateCakeModel {
         this.imageURL = imageURL;
     }
 
-    public String getAdminID() {
-        return adminID;
+    public String getRandomUID() {
+        return randomUID;
     }
 
-    public void setAdminID(String adminID) {
-        this.adminID = adminID;
+    public void setRandomUID(String randomUID) {
+        this.randomUID = randomUID;
+    }
+
+    public String getAdmID() {
+        return admID;
+    }
+
+    public void setAdmID(String admID) {
+        this.admID = admID;
     }
 }

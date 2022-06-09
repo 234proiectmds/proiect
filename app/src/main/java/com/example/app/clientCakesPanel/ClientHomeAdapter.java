@@ -26,7 +26,6 @@ public class ClientHomeAdapter extends RecyclerView.Adapter<ClientHomeAdapter.Vi
         this.updateCakeModelList = updateCakeModelList;
     }
 
-
     @NonNull
     @Override
     public ClientHomeAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -38,10 +37,10 @@ public class ClientHomeAdapter extends RecyclerView.Adapter<ClientHomeAdapter.Vi
     public void onBindViewHolder(@NonNull ClientHomeAdapter.ViewHolder holder, int position) {
         final UpdateCakeModel updateCakeModel = updateCakeModelList.get(position);
         Glide.with(mContext).load(updateCakeModel.getImageURL()).into(holder.imageView);
-        holder.cakeName.setText(updateCakeModel.getPrice());
+        holder.cakeName.setText(updateCakeModel.getPret());
         updateCakeModel.getRandomUID();
-        updateCakeModel.getAdminID();
-        holder.price.setText("Pret: " + updateCakeModel.getPrice() + " RON");
+        updateCakeModel.getAdmID();
+        holder.price.setText("Pret: " + updateCakeModel.getPret() + " RON");
     }
 
     @Override

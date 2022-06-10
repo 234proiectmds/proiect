@@ -37,14 +37,14 @@ public class AdminHomeAdapter extends RecyclerView.Adapter<AdminHomeAdapter.View
         holder.dishes.setText(updateCakeModel.getTorturi());
         updateCakeModel.getRandomUID();
 
-//        holder.itemView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent=new Intent(mcont,Update_Delete_Dish.class);
-//                intent.putExtra("updatedeletedish",updateDishModel.getRandomUID());
-//                mcont.startActivity(intent);
-//            }
-//        });
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(mcont, UpdateDelete_Cake.class);
+                intent.putExtra("updatedeletecake",updateCakeModel.getRandomUID());
+                mcont.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -58,7 +58,6 @@ public class AdminHomeAdapter extends RecyclerView.Adapter<AdminHomeAdapter.View
         public ViewHolder(@NonNull View itemView){
             super(itemView);
             dishes = itemView.findViewById(R.id.dish_name);
-
         }
     }
 }

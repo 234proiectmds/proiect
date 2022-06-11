@@ -107,6 +107,7 @@ public class UpdateDelete_Cake extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         AlertDialog.Builder builder = new AlertDialog.Builder(UpdateDelete_Cake.this);
+                        builder.setMessage("Sunteti sigur ca doriti sa stergeti produsul?");
                         builder.setPositiveButton("Da", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {

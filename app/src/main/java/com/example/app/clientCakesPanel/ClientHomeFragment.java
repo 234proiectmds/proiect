@@ -1,5 +1,6 @@
 package com.example.app.clientCakesPanel;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -39,6 +40,7 @@ public class ClientHomeFragment extends Fragment implements SwipeRefreshLayout.O
     DatabaseReference data, databaseReference;
     SwipeRefreshLayout swipeRefreshLayout;
 
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -66,6 +68,7 @@ public class ClientHomeFragment extends Fragment implements SwipeRefreshLayout.O
                         Client client = snapshot.getValue(Client.class);
                         city = client.getCity();
                         county = client.getCounty();
+                        clientMenu();
                     }
 
                     @Override
@@ -100,13 +103,13 @@ public class ClientHomeFragment extends Fragment implements SwipeRefreshLayout.O
 
     private void clientMenu() {
         swipeRefreshLayout.setRefreshing(true);
-        databaseReference = FirebaseDatabase.getInstance().getReference("DetaliiTorturi").child(city).child(county);
+        databaseReference = FirebaseDatabase.getInstance().getReference("DetaliiTorturi");
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 updateCakeModelList.clear();
                 for (DataSnapshot snapshot1 : snapshot.getChildren()) {
-                    for (DataSnapshot snapshot2 : snapshot.getChildren()) {
+                    for (DataSnapshot snapshot2 : snapshot1.getChildren()) {
                         UpdateCakeModel updateCakeModel = snapshot2.getValue(UpdateCakeModel.class);
                         updateCakeModelList.add(updateCakeModel);
                     }

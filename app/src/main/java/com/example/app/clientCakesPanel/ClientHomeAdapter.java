@@ -37,7 +37,7 @@ public class ClientHomeAdapter extends RecyclerView.Adapter<ClientHomeAdapter.Vi
     public void onBindViewHolder(@NonNull ClientHomeAdapter.ViewHolder holder, int position) {
         final UpdateCakeModel updateCakeModel = updateCakeModelList.get(position);
         Glide.with(mContext).load(updateCakeModel.getImageURL()).into(holder.imageView);
-        holder.cakeName.setText(updateCakeModel.getPret());
+        holder.cakeName.setText(updateCakeModel.getTorturi());
         updateCakeModel.getRandomUID();
         updateCakeModel.getAdmID();
         holder.price.setText("Pret: " + updateCakeModel.getPret() + " RON");

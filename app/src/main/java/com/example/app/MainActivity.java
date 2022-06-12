@@ -14,6 +14,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.app.admin.AdminTablouNavigatie;
+import com.example.app.client.ClientTablouNavigare;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -26,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
     ImageView imageView;
     TextView textView;
     FirebaseAuth Fauth;
-    FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
 
     @Override
@@ -50,33 +51,32 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 Fauth = FirebaseAuth.getInstance();
-                if(Fauth.getCurrentUser()!= null){
-                    if(Fauth.getCurrentUser().isEmailVerified())
-                    {
+                if (Fauth.getCurrentUser() != null) {
+                    if (Fauth.getCurrentUser().isEmailVerified()) {
                         Fauth = FirebaseAuth.getInstance();
 
-                        databaseReference = FirebaseDatabase.getInstance().getReference("User").child(FirebaseAuth.getInstance().getUid()+"/Role");
+                        databaseReference = FirebaseDatabase.getInstance().getReference("User").child(FirebaseAuth.getInstance().getUid() + "/Role");
                         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
                             @Override
                             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                String role =snapshot.getValue(String.class);
-                                if(role.equals("Admin")){
-                                    startActivity(new Intent(MainActivity.this,AdminCakes_Navigation.class));
+                                String role = snapshot.getValue(String.class);
+                                if (role.equals("Admin")) {
+                                    startActivity(new Intent(MainActivity.this, AdminTablouNavigatie.class));
                                     finish();
                                 }
-                                if(role.equals("Client")){
-                                    startActivity(new Intent(MainActivity.this,ClientCakes_Navigation.class));
+                                if (role.equals("Client")) {
+                                    startActivity(new Intent(MainActivity.this, ClientTablouNavigare.class));
                                     finish();
                                 }
                             }
 
                             @Override
                             public void onCancelled(@NonNull DatabaseError error) {
-                                Toast.makeText(MainActivity.this,error.getMessage(),Toast.LENGTH_LONG).show();
+                                Toast.makeText(MainActivity.this, error.getMessage(), Toast.LENGTH_LONG).show();
                             }
                         });
 
-                    }else{
+                    } else {
                         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                         builder.setMessage("Verificati emailul dvs!!");
                         builder.setCancelable(false);
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 dialog.dismiss();
-                                Intent intent = new Intent(MainActivity.this,MainMenu.class);
+                                Intent intent = new Intent(MainActivity.this, MainMenu.class);
                                 startActivity(intent);
                                 finish();
                             }
@@ -93,12 +93,12 @@ public class MainActivity extends AppCompatActivity {
                         alertDialog.show();
                         Fauth.signOut();
                     }
-                }else {
+                } else {
                     Intent intent = new Intent(MainActivity.this, MainMenu.class);
                     startActivity(intent);
                     finish();
                 }
             }
-        },3000);
+        }, 3000);
     }
 }

@@ -29,14 +29,31 @@
         <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/menu/admin_bottom_navigation.xml" value="0.19166666666666668" />
         <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/menu/client_bottom_navigation.xml" value="0.19166666666666668" />
         <entry key="..\:/Facultate/An2/Sem2/MDS/proiect/app/src/main/res/menu/logout.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/Andreea/Desktop/proiectMDS/proiect/app/src/main/res/drawable/background_shape.xml" value="0.142" />
         <entry key="..\:/Users/Andreea/Desktop/proiectMDS/proiect/app/src/main/res/drawable/buton_shape.xml" value="0.1215" />
         <entry key="..\:/Users/Andreea/Desktop/proiectMDS/proiect/app/src/main/res/drawable/butonred.xml" value="0.1215" />
-        <entry key="..\:/Users/Andreea/Desktop/proiectMDS/proiect/app/src/main/res/layout/activity_admin_loginemail.xml" value="0.21403508771929824" />
+        <entry key="..\:/Users/Andreea/Desktop/proiectMDS/proiect/app/src/main/res/layout/activity_admin_cakes_navigation.xml" value="0.10454155955441302" />
+        <entry key="..\:/Users/Andreea/Desktop/proiectMDS/proiect/app/src/main/res/layout/activity_admin_creaza_tort.xml" value="0.21403508771929824" />
+        <entry key="..\:/Users/Andreea/Desktop/proiectMDS/proiect/app/src/main/res/layout/activity_admin_creeaza_tort.xml" value="0.21403508771929824" />
+        <entry key="..\:/Users/Andreea/Desktop/proiectMDS/proiect/app/src/main/res/layout/activity_admin_forgot_password.xml" value="0.21403508771929824" />
+        <entry key="..\:/Users/Andreea/Desktop/proiectMDS/proiect/app/src/main/res/layout/activity_admin_inregistrare.xml" value="0.10454155955441302" />
+        <entry key="..\:/Users/Andreea/Desktop/proiectMDS/proiect/app/src/main/res/layout/activity_admin_loginemail.xml" value="0.25" />
         <entry key="..\:/Users/Andreea/Desktop/proiectMDS/proiect/app/src/main/res/layout/activity_admin_registration.xml" value="0.21403508771929824" />
+        <entry key="..\:/Users/Andreea/Desktop/proiectMDS/proiect/app/src/main/res/layout/activity_admin_uitat_parola.xml" value="0.21403508771929824" />
         <entry key="..\:/Users/Andreea/Desktop/proiectMDS/proiect/app/src/main/res/layout/activity_choose_one.xml" value="0.2" />
         <entry key="..\:/Users/Andreea/Desktop/proiectMDS/proiect/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/Andreea/Desktop/proiectMDS/proiect/app/src/main/res/layout/activity_main_menu.xml" value="0.24547101449275363" />
+        <entry key="..\:/Users/Andreea/Desktop/proiectMDS/proiect/app/src/main/res/layout/activity_main_menu.xml" value="0.1" />
+        <entry key="..\:/Users/Andreea/Desktop/proiectMDS/proiect/app/src/main/res/layout/activity_update_delete_dish.xml" value="0.21403508771929824" />
+        <entry key="..\:/Users/Andreea/Desktop/proiectMDS/proiect/app/src/main/res/layout/admin_update_delete.xml" value="0.21403508771929824" />
+        <entry key="..\:/Users/Andreea/Desktop/proiectMDS/proiect/app/src/main/res/layout/client_menucake.xml" value="0.21403508771929824" />
+        <entry key="..\:/Users/Andreea/Desktop/proiectMDS/proiect/app/src/main/res/layout/fragment_admin_home.xml" value="0.10454155955441302" />
+        <entry key="..\:/Users/Andreea/Desktop/proiectMDS/proiect/app/src/main/res/layout/fragment_admin_profil.xml" value="0.21403508771929824" />
+        <entry key="..\:/Users/Andreea/Desktop/proiectMDS/proiect/app/src/main/res/layout/fragment_client_home.xml" value="0.264" />
+        <entry key="..\:/Users/Andreea/Desktop/proiectMDS/proiect/app/src/main/res/layout/fragment_client_track.xml" value="0.21403508771929824" />
+        <entry key="..\:/Users/Andreea/Desktop/proiectMDS/proiect/app/src/main/res/menu/admin_bottom_navigation.xml" value="0.21125541125541125" />
+        <entry key="..\:/Users/Andreea/Desktop/proiectMDS/proiect/app/src/main/res/menu/client_bottom_navigation.xml" value="0.21403508771929824" />
         <entry key="..\:/Users/Andreea/Desktop/proiectMDS/proiect/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1215" />
+        <entry key="..\:/Users/Andreea/Desktop/proiectMDS/proiect/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.142" />
         <entry key="..\:/Users/Stefi/AndroidStudioProjects/Cakes/app/src/main/res/drawable/background_shape.xml" value="0.1" />
         <entry key="..\:/Users/Stefi/AndroidStudioProjects/Cakes/app/src/main/res/drawable/butonblue.xml" value="0.1" />
         <entry key="..\:/Users/Stefi/AndroidStudioProjects/Cakes/app/src/main/res/drawable/butonred.xml" value="0.1" />
@@ -72,7 +89,6 @@
         <entry key="..\:/Users/tiast/OneDrive/college/2/2.2/MDS/Proiect/proiect/app/src/main/res/layout/activity_choose_one.xml" value="0.21052631578947367" />
         <entry key="..\:/Users/tiast/OneDrive/college/2/2.2/MDS/Proiect/proiect/app/src/main/res/layout/activity_client_loginemail.xml" value="0.21052631578947367" />
         <entry key="..\:/Users/tiast/OneDrive/college/2/2.2/MDS/Proiect/proiect/app/src/main/res/layout/activity_client_registration.xml" value="0.2" />
-        <entry key="..\:/Users/tiast/OneDrive/college/2/2.2/MDS/Proiect/proiect/app/src/main/res/layout/activity_main.xml" value="0.4" />
         <entry key="..\:/Users/tiast/OneDrive/college/2/2.2/MDS/Proiect/proiect/app/src/main/res/layout/activity_main_menu.xml" value="0.32142857142857145" />
         <entry key="..\:/Users/tiast/OneDrive/college/2/2.2/MDS/Proiect/proiect/app/src/main/res/layout/fragment_admin_profile.xml" value="0.21052631578947367" />
       </map>

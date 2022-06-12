@@ -42,22 +42,22 @@ public class MainMenu extends AppCompatActivity {
 
             }
         });
-        signinemail=(Button)findViewById(R.id.signInwithEmail);
-        signinphone=(Button)findViewById(R.id.signInwithPhone);
-        signup=(Button)findViewById(R.id.LogIn);
+        signinemail = (Button) findViewById(R.id.signInwithEmail);
+        signinphone = (Button) findViewById(R.id.signInwithPhone);
+        signup = (Button) findViewById(R.id.LogIn);
         signinemail.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View v) {
-                 Intent signEmail = new Intent(MainMenu.this, ChooseOne.class);
-                 signEmail.putExtra("Home", "Email");
-                 startActivity(signEmail);
-                 finish();
-             }
-         });
+            @Override
+            public void onClick(View v) {
+                Intent signEmail = new Intent(MainMenu.this, OptiuniPrimaPagina.class);
+                signEmail.putExtra("Home", "Email");
+                startActivity(signEmail);
+                finish();
+            }
+        });
         signinphone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent signPhone = new Intent(MainMenu.this, ChooseOne.class);
+                Intent signPhone = new Intent(MainMenu.this, OptiuniPrimaPagina.class);
                 signPhone.putExtra("Home", "Phone");
                 startActivity(signPhone);
                 finish();
@@ -66,14 +66,12 @@ public class MainMenu extends AppCompatActivity {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent logIn = new Intent(MainMenu.this, ChooseOne.class);
+                Intent logIn = new Intent(MainMenu.this, OptiuniPrimaPagina.class);
                 logIn.putExtra("Home", "SignUp");
                 startActivity(logIn);
                 finish();
             }
         });
-
-
     }
 
     @Override

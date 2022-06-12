@@ -16,61 +16,61 @@
         android:theme="@style/Theme.Cakes"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".adminCakesPanel.UpdateDelete_Cake"
+            android:name=".admin.UpdateDeleteTort"
             android:exported="false" />
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:exported="true"
             android:theme="@style/Base.Theme.AppCompat" />
         <activity
-            android:name=".adminCakesPanel.admin_creazaTort"
+            android:name=".admin.AdminCreeazaTort"
             android:exported="true" />
         <activity
-            android:name=".ClientForgotPassword"
+            android:name=".client.ClientUitatParola"
             android:exported="false" />
         <activity
-            android:name=".ClientCakes_Navigation"
+            android:name=".client.ClientTablouNavigare"
             android:exported="false" />
         <activity
-            android:name=".ClientSendOtp"
+            android:name=".client.ClientTrimiteOtp"
             android:exported="false" />
         <activity
-            android:name=".ClientVerifyPhone"
+            android:name=".client.ClientVerificareTelefon"
             android:exported="false" />
         <activity
-            android:name=".AdminSendOtp"
+            android:name=".admin.AdminTrimiteOtp"
             android:exported="false" />
         <activity
-            android:name=".AdminForgotPassword"
+            android:name=".admin.AdminUitatParola"
             android:exported="false" />
         <activity
-            android:name=".AdminCakes_Navigation"
+            android:name=".admin.AdminTablouNavigatie"
             android:exported="false" />
         <activity
-            android:name=".AdminVerifyPhone"
+            android:name=".admin.AdminVerificareTelefon"
             android:exported="false" />
         <activity
-            android:name=".ClientRegistration"
+            android:name=".client.ClientInregistrare"
             android:exported="false" />
         <activity
-            android:name=".ClientLoginphone"
+            android:name=".client.ClientLoginTelefon"
             android:exported="false" />
         <activity
-            android:name=".ClientLoginemail"
+            android:name=".client.ClientLoginEmail"
             android:exported="false" />
         <activity
-            android:name=".AdminRegistration"
+            android:name=".admin.AdminInregistrare"
             android:exported="false"
             android:usesCleartextTraffic="true"
             tools:targetApi="m" />
         <activity
-            android:name=".AdminLoginphone"
+            android:name=".admin.AdminLoginTelefon"
             android:exported="false" />
         <activity
-            android:name=".AdminLoginemail"
+            android:name=".admin.AdminLoginEmail"
             android:exported="false" />
         <activity
-            android:name=".ChooseOne"
+            android:name=".OptiuniPrimaPagina"
             android:exported="false" />
         <activity
             android:name=".MainMenu"

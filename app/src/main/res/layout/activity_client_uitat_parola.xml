@@ -5,5 +5,83 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".client.ClientUitatParola">
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/imagine7" />
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="380dp"
+        android:id="@+id/linearLayout"
+        android:background="@drawable/background_shape"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="15dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Introdu emailul"
+            android:textSize="20sp"
+            android:textColor="@color/DarkBlue"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:fontFamily="monospace"
+            android:textStyle="italic"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="15dp"
+            android:hint="Email"
+            android:ems="10"
+            android:id="@+id/inputEmail"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:id="@+id/btnReset"
+            android:background="@drawable/butonblue"
+            android:text="Trimite mail de resetare"
+            android:textSize="18sp"
+            android:textColor="@color/white"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:id="@+id/btnBack"
+            android:textColor="@color/white"
+            android:text="Inapoi"
+            android:background="@drawable/butonred"
+            android:textSize="18sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text"
+            android:layout_gravity="center_horizontal"
+            android:text=""
+            android:layout_marginTop="15dp"
+            android:textAlignment="center"
+            android:textColor="@color/gray"
+            android:textSize="16sp"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone" />
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

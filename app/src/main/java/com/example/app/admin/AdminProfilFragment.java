@@ -41,12 +41,12 @@ public class AdminProfilFragment extends Fragment {
         backimg.setBackgroundDrawable(animationDrawable);
         animationDrawable.start();
 
-        creeazaTort = (Button)v.findViewById(R.id.creaza_tort);
+        creeazaTort = (Button) v.findViewById(R.id.creaza_tort);
 
         creeazaTort.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    startActivity(new Intent(getContext(), AdminCreeazaTort.class));
+                startActivity(new Intent(getContext(), AdminCreeazaTort.class));
             }
         });
 

@@ -29,7 +29,6 @@ public class MainMenu extends AppCompatActivity {
         zoomout.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
-
             }
 
             @Override
@@ -39,7 +38,6 @@ public class MainMenu extends AppCompatActivity {
 
             @Override
             public void onAnimationRepeat(Animation animation) {
-
             }
         });
         signinemail = (Button) findViewById(R.id.signInwithEmail);

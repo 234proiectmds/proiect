@@ -36,7 +36,7 @@ public class ClientInregistrare extends AppCompatActivity {
     FirebaseAuth FAuth;
     DatabaseReference databaseReference;
     FirebaseDatabase firebaseDatabase;
-    String firstName, lastName, email, password, confirmPassword, mobile, county, city, street, streetNumber, detailsAddress, zipCode, role="Client";
+    String firstName, lastName, email, password, confirmPassword, mobile, county, city, street, streetNumber, detailsAddress, zipCode, role = "Client";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +69,6 @@ public class ClientInregistrare extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
             }
         });
 
@@ -82,7 +81,6 @@ public class ClientInregistrare extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
             }
         });
 
@@ -103,35 +101,35 @@ public class ClientInregistrare extends AppCompatActivity {
                 detailsAddress = DetailsAddress.getEditText().getText().toString().trim();
                 zipCode = ZipCode.getEditText().getText().toString().trim();
 
-                if(isValid()){
+                if (isValid()) {
                     final ProgressDialog mDialog = new ProgressDialog(ClientInregistrare.this);
                     mDialog.setCancelable(false);
                     mDialog.setCanceledOnTouchOutside(false);
                     mDialog.setMessage("Inregistrare in progres. Va rugam asteptati .....");
                     mDialog.show();
 
-                    FAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    FAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
-                            if (task.isSuccessful()){
+                            if (task.isSuccessful()) {
                                 String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
                                 databaseReference = FirebaseDatabase.getInstance().getReference("User").child(userId);
                                 final Map<String, String> userMap = new HashMap<>();
-                                userMap.put("Role",role);
+                                userMap.put("Role", role);
                                 databaseReference.setValue(userMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
-                                        Map<String,String> userMap1 = new HashMap<>();
-                                        userMap1.put("Nume",lastName);
-                                        userMap1.put("Prenume",firstName);
-                                        userMap1.put("Email",email);
-                                        userMap1.put("Parola",password);
-                                        userMap1.put("Confirmare Parola",confirmPassword);
-                                        userMap1.put("Mobil",mobile);
-                                        userMap1.put("Strada",street);
-                                        userMap1.put("Nr strada",streetNumber);
-                                        userMap1.put("Detalii adresa",detailsAddress);
-                                        userMap1.put("Cod postal",zipCode);
+                                        Map<String, String> userMap1 = new HashMap<>();
+                                        userMap1.put("Nume", lastName);
+                                        userMap1.put("Prenume", firstName);
+                                        userMap1.put("Email", email);
+                                        userMap1.put("Parola", password);
+                                        userMap1.put("Confirmare Parola", confirmPassword);
+                                        userMap1.put("Mobil", mobile);
+                                        userMap1.put("Strada", street);
+                                        userMap1.put("Nr strada", streetNumber);
+                                        userMap1.put("Detalii adresa", detailsAddress);
+                                        userMap1.put("Cod postal", zipCode);
 
                                         firebaseDatabase.getInstance().getReference("Client")
                                                 .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
@@ -142,7 +140,7 @@ public class ClientInregistrare extends AppCompatActivity {
                                                 FAuth.getCurrentUser().sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
                                                     @Override
                                                     public void onComplete(@NonNull Task<Void> task) {
-                                                        if(task.isSuccessful()){
+                                                        if (task.isSuccessful()) {
                                                             AlertDialog.Builder builder = new AlertDialog.Builder(ClientInregistrare.this);
                                                             builder.setMessage("V-ati inregistrat cu succes! Acum va rugam verificati emailul dvs.");
                                                             builder.setCancelable(false);
@@ -151,19 +149,18 @@ public class ClientInregistrare extends AppCompatActivity {
                                                                 public void onClick(DialogInterface dialog, int which) {
 
                                                                     dialog.dismiss();
-                                                                    String phonenumber = "+40"+ mobile;
+                                                                    String phonenumber = "+40" + mobile;
                                                                     Intent b = new Intent(ClientInregistrare.this, ClientVerificareTelefon.class);
-                                                                    b.putExtra("phonenumber",phonenumber);
+                                                                    b.putExtra("phonenumber", phonenumber);
                                                                     startActivity(b);
                                                                 }
                                                             });
                                                             AlertDialog Alert = builder.create();
                                                             Alert.show();
 
-                                                        }else
-                                                        {
+                                                        } else {
                                                             mDialog.dismiss();
-                                                            MesajAlerta.ShowAlert(ClientInregistrare.this,"Error",task.getException().getMessage());
+                                                            MesajAlerta.ShowAlert(ClientInregistrare.this, "Error", task.getException().getMessage());
                                                         }
                                                     }
                                                 });
@@ -171,11 +168,9 @@ public class ClientInregistrare extends AppCompatActivity {
                                         });
                                     }
                                 });
-                            }
-                            else
-                            {
+                            } else {
                                 mDialog.dismiss();
-                                MesajAlerta.ShowAlert(ClientInregistrare.this,"Error",task.getException().getMessage());
+                                MesajAlerta.ShowAlert(ClientInregistrare.this, "Error", task.getException().getMessage());
                             }
                         }
                     });
@@ -203,7 +198,7 @@ public class ClientInregistrare extends AppCompatActivity {
     String firstNamePattern = "([A-Z][a-z]*)([\\s\\\'-][A-Z][a-z]*)*";
     String passwordPattern = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$";
 
-    public boolean isValid(){
+    public boolean isValid() {
         Email.setErrorEnabled(false);
         Email.setError("");
         FirstName.setErrorEnabled(false);
@@ -237,34 +232,34 @@ public class ClientInregistrare extends AppCompatActivity {
                 isValideZipCode = false;
 
 //                check first name
-        if(TextUtils.isEmpty(firstName)){
+        if (TextUtils.isEmpty(firstName)) {
             FirstName.setErrorEnabled(true);
             FirstName.setError("Introduceti prenumele dvs.!  Acesta nu poate lipsi.");
-        }else{
-            if(firstName.matches(firstNamePattern)){
+        } else {
+            if (firstName.matches(firstNamePattern)) {
                 isValideFirstName = true;
-            }else{
+            } else {
                 FirstName.setErrorEnabled(true);
                 FirstName.setError("Introduceti un prenume valid! Prenumele nu poate contine cifre sau alte caractere in afara de '-' si incepe cu litera mare!");
             }
         }
 //                check last name
-        if(TextUtils.isEmpty(lastName)){
+        if (TextUtils.isEmpty(lastName)) {
             LastName.setErrorEnabled(true);
             LastName.setError("Introduceti numele dvs. de familie!  Acesta nu poate lipsi.");
-        }else{
-            if(lastName.matches(lastNamePattern)){
+        } else {
+            if (lastName.matches(lastNamePattern)) {
                 isValideLastName = true;
-            }else{
+            } else {
                 LastName.setErrorEnabled(true);
                 LastName.setError("Introduceti un nume valid! Numele nu poate contine cifre sau alte caractere si incepe cu litera mare!");
             }
         }
 //               check email
-        if(TextUtils.isEmpty(email)){
+        if (TextUtils.isEmpty(email)) {
             Email.setErrorEnabled(true);
             Email.setError("Introduceti email-ul dvs! Acesta nu poate lipsi.");
-        }else {
+        } else {
             if (email.matches(emailPattern)) {
                 isValideEmail = true;
             } else {
@@ -273,73 +268,69 @@ public class ClientInregistrare extends AppCompatActivity {
             }
         }
 //              check password
-        if(TextUtils.isEmpty(password)){
+        if (TextUtils.isEmpty(password)) {
             Password.setErrorEnabled(true);
             Password.setError("Creati o parola. Aceasta nu poate lipsi.");
-        }else{
-            if(password.matches(passwordPattern))
-            {
+        } else {
+            if (password.matches(passwordPattern)) {
                 isValidePassword = true;
-            }
-            else
-            {
+            } else {
                 Password.setErrorEnabled(true);
                 Password.setError("Parola dvs. este slaba. Creati o parola care are cel putin 8 caractere (cel putin o litera si o cifra).");
             }
         }
 //              check confirm password
-        if(TextUtils.isEmpty(confirmPassword)){
+        if (TextUtils.isEmpty(confirmPassword)) {
             ConfirmPassword.setErrorEnabled(true);
             ConfirmPassword.setError("Confirmati parola introdusa mai sus!");
-        }else{
-            if(!password.equals(confirmPassword)){
+        } else {
+            if (!password.equals(confirmPassword)) {
                 ConfirmPassword.setErrorEnabled(true);
                 ConfirmPassword.setError("Parolele nu se potrivesc!");
-            }else{
+            } else {
                 isValideConfirmPassword = true;
             }
-
         }
 //              check mobile number
-        if(TextUtils.isEmpty(mobile)){
+        if (TextUtils.isEmpty(mobile)) {
             Mobile.setErrorEnabled(true);
             Mobile.setError("Nr. dvs. de telefon nu poate lipsi!");
-        }else{
-            if(mobile.length()<10){
+        } else {
+            if (mobile.length() < 10) {
                 Mobile.setErrorEnabled(true);
                 Mobile.setError("Numar de telefon invalid!");
-            }else{
+            } else {
                 isValideMobile = true;
             }
         }
 //              check street
-        if(TextUtils.isEmpty(street)){
+        if (TextUtils.isEmpty(street)) {
             Street.setErrorEnabled(true);
             Street.setError("Nu ati introdus strada!");
-        }else{
+        } else {
             isValideStreet = true;
         }
 
 //              check street number
-        if(TextUtils.isEmpty(streetNumber)){
+        if (TextUtils.isEmpty(streetNumber)) {
             StreetNumber.setErrorEnabled(true);
             StreetNumber.setError("Nu ati introdus numarul strazii!");
-        }else{
+        } else {
             isValideStreetNumber = true;
         }
 //              check zip code
-        if(TextUtils.isEmpty(zipCode)){
+        if (TextUtils.isEmpty(zipCode)) {
             ZipCode.setErrorEnabled(true);
             ZipCode.setError("Nu ati introdus codul postal!");
-        }else{
-            if(zipCode.length()!=6){
+        } else {
+            if (zipCode.length() != 6) {
                 ZipCode.setErrorEnabled(true);
                 ZipCode.setError("Codul postal este format din 6  cifre! Nu ati introdus unul valid.");
-            }else{
+            } else {
                 isValideZipCode = true;
             }
         }
-        isValid = (isValideLastName && isValideFirstName && isValideEmail && isValidePassword && isValideConfirmPassword && isValideMobile && isValideStreet && isValideStreetNumber && isValideZipCode)? true : false;
+        isValid = isValideLastName && isValideFirstName && isValideEmail && isValidePassword && isValideConfirmPassword && isValideMobile && isValideStreet && isValideStreetNumber && isValideZipCode;
 
         return isValid;
     }

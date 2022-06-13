@@ -53,7 +53,7 @@ public class AdminTrimiteOtp extends AppCompatActivity {
         verify.setOnClickListener(v -> {
             String code = enterCode.getText().toString().trim();
             resend.setVisibility(View.INVISIBLE);
-            if (code.isEmpty() && code.length() < 6) {
+            if (code.length() == 0) {
                 enterCode.setError("Enter code");
                 enterCode.requestFocus();
                 return;
@@ -61,9 +61,7 @@ public class AdminTrimiteOtp extends AppCompatActivity {
             verifyCode(code);
         });
 
-
         new CountDownTimer(60000, 1000) {
-
             @Override
             public void onTick(long millisUntilFinished) {
                 txt.setVisibility(View.VISIBLE);
@@ -103,7 +101,6 @@ public class AdminTrimiteOtp extends AppCompatActivity {
     }
 
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mcallBack = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-
         @Override
         public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
             String code = phoneAuthCredential.getSmsCode();

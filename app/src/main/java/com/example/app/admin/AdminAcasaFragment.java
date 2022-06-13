@@ -39,7 +39,7 @@ public class AdminAcasaFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_admin_acasa, null);
         getActivity().setTitle("Acasa");
         setHasOptionsMenu(true);
-        recyclerView  = v.findViewById(R.id.Recycle_menu);
+        recyclerView = v.findViewById(R.id.Recycle_menu);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         updateCakeModelList = new ArrayList<>();
@@ -52,13 +52,10 @@ public class AdminAcasaFragment extends Fragment {
                 adminDishes();
             }
 
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
             }
         });
-
         return v;
     }
 
@@ -69,17 +66,16 @@ public class AdminAcasaFragment extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 updateCakeModelList.clear();
-                for(DataSnapshot snapshot1:snapshot.getChildren()){
-                    UpdateTortModel updateCakeModel  = snapshot1.getValue(UpdateTortModel.class);
+                for (DataSnapshot snapshot1 : snapshot.getChildren()) {
+                    UpdateTortModel updateCakeModel = snapshot1.getValue(UpdateTortModel.class);
                     updateCakeModelList.add(updateCakeModel);
                 }
-                adapter = new AdminAcasaAdaptor(getContext(),updateCakeModelList);
+                adapter = new AdminAcasaAdaptor(getContext(), updateCakeModelList);
                 recyclerView.setAdapter(adapter);
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
             }
         });
     }
@@ -92,7 +88,7 @@ public class AdminAcasaFragment extends Fragment {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int idd = item.getItemId();
-        if(idd == R.id.logout){
+        if (idd == R.id.logout) {
             logout();
             return true;
         }
@@ -102,7 +98,7 @@ public class AdminAcasaFragment extends Fragment {
     private void logout() {
         FirebaseAuth.getInstance().signOut();
         Intent intent = new Intent(getActivity(), MainMenu.class);
-        intent.addFlags(intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        intent.addFlags(intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
 }

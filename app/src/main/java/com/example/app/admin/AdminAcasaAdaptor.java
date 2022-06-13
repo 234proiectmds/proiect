@@ -14,13 +14,11 @@ import com.example.app.R;
 
 import java.util.List;
 
-public class AdminAcasaAdaptor extends RecyclerView.Adapter<AdminAcasaAdaptor.ViewHolder>
-{
+public class AdminAcasaAdaptor extends RecyclerView.Adapter<AdminAcasaAdaptor.ViewHolder> {
     private Context mcont;
     private List<UpdateTortModel> updateCakeModelList;
 
-    public AdminAcasaAdaptor(Context context, List<UpdateTortModel> updateCakeModelList)
-    {
+    public AdminAcasaAdaptor(Context context, List<UpdateTortModel> updateCakeModelList) {
         this.updateCakeModelList = updateCakeModelList;
         this.mcont = context;
     }
@@ -28,7 +26,7 @@ public class AdminAcasaAdaptor extends RecyclerView.Adapter<AdminAcasaAdaptor.Vi
     @NonNull
     @Override
     public AdminAcasaAdaptor.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(mcont).inflate(R.layout.admin_update_delete,parent,false);
+        View view = LayoutInflater.from(mcont).inflate(R.layout.admin_update_delete, parent, false);
         return new AdminAcasaAdaptor.ViewHolder(view);
     }
 
@@ -41,8 +39,8 @@ public class AdminAcasaAdaptor extends RecyclerView.Adapter<AdminAcasaAdaptor.Vi
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(mcont, UpdateDeleteTort.class);
-                intent.putExtra("updatedeletecake",updateCakeModel.getRandomUID());
+                Intent intent = new Intent(mcont, UpdateDeleteTort.class);
+                intent.putExtra("updatedeletecake", updateCakeModel.getRandomUID());
                 mcont.startActivity(intent);
             }
         });
@@ -53,10 +51,10 @@ public class AdminAcasaAdaptor extends RecyclerView.Adapter<AdminAcasaAdaptor.Vi
         return updateCakeModelList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder {
         TextView dishes;
 
-        public ViewHolder(@NonNull View itemView){
+        public ViewHolder(@NonNull View itemView) {
             super(itemView);
             dishes = itemView.findViewById(R.id.dish_name);
         }

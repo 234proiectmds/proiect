@@ -37,7 +37,6 @@ public class AdminLoginTelefon extends AppCompatActivity {
             startActivity(b);
             finish();
         });
-
         signup.setOnClickListener(v -> {
             startActivity(new Intent(AdminLoginTelefon.this, AdminInregistrare.class));
             finish();

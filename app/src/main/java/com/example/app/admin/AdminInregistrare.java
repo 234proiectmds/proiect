@@ -67,7 +67,6 @@ public class AdminInregistrare extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
             }
         });
 
@@ -80,7 +79,6 @@ public class AdminInregistrare extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
             }
         });
 
@@ -145,7 +143,6 @@ public class AdminInregistrare extends AppCompatActivity {
                                                         builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                                                             @Override
                                                             public void onClick(DialogInterface dialog, int which) {
-
                                                                 dialog.dismiss();
                                                                 String phonenumber = "+40" + mobile;
                                                                 Intent b = new Intent(AdminInregistrare.this, AdminVerificareTelefon.class);
@@ -155,7 +152,6 @@ public class AdminInregistrare extends AppCompatActivity {
                                                         });
                                                         AlertDialog Alert = builder.create();
                                                         Alert.show();
-
                                                     } else {
                                                         mDialog.dismiss();
                                                         MesajAlerta.ShowAlert(AdminInregistrare.this, "Error", task.getException().getMessage());
@@ -222,13 +218,10 @@ public class AdminInregistrare extends AppCompatActivity {
                 isValideMobile = false, isValideStreet = false, isValideStreetNumber = false, isValideZipCode = false;
 
 //               check first name
-        if (TextUtils.isEmpty(firstName))
-        {
+        if (TextUtils.isEmpty(firstName)) {
             FirstName.setErrorEnabled(true);
             FirstName.setError("Introduceti prenumele dvs.!  Acesta nu poate lipsi.");
-        }
-        else
-        {
+        } else {
             if (firstName.matches(firstNamePattern)) {
                 isValideFirstName = true;
             } else {
@@ -265,12 +258,9 @@ public class AdminInregistrare extends AppCompatActivity {
             Password.setErrorEnabled(true);
             Password.setError("Creati o parola. Aceasta nu poate lipsi.");
         } else {
-            if (password.matches(passwordPattern))
-            {
+            if (password.matches(passwordPattern)) {
                 isValidePassword = true;
-            }
-            else
-            {
+            } else {
                 Password.setErrorEnabled(true);
                 Password.setError("Parola dvs. este slaba. Creati o parola care are cel putin 8 caractere (cel putin o litera si o cifra).");
             }
@@ -327,7 +317,7 @@ public class AdminInregistrare extends AppCompatActivity {
                 isValideZipCode = true;
             }
         }
-        isValid = (isValideLastName && isValideFirstName && isValideEmail && isValidePassword && isValideConfirmPassword && isValideMobile && isValideStreet && isValideStreetNumber && isValideZipCode) ? true : false;
+        isValid = isValideLastName && isValideFirstName && isValideEmail && isValidePassword && isValideConfirmPassword && isValideMobile && isValideStreet && isValideStreetNumber && isValideZipCode;
 
         return isValid;
     }

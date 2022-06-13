@@ -1,12 +1,10 @@
 package com.example.app.admin;
 
-public class Admin
-{
+public class Admin {
     private String judet, oras, parola, parolaVerif, email, prenume, nume, telefon, codPostal;
 
     public Admin(String judet, String oras, String parola, String parolaVerif, String email,
-                 String prenume, String nume, String telefon, String codPostal)
-    {
+                 String prenume, String nume, String telefon, String codPostal) {
         this.judet = judet;
         this.oras = oras;
         this.parola = parola;
@@ -18,12 +16,12 @@ public class Admin
         this.codPostal = codPostal;
     }
 
-    public Admin()
-    {
-
+    public Admin() {
     }
 
-    public String getJudet() { return judet; }
+    public String getJudet() {
+        return judet;
+    }
 
     public void setJudet(String judet) {
         this.judet = judet;

@@ -42,8 +42,7 @@ import com.theartofdev.edmodo.cropper.CropImageView;
 
 import java.util.UUID;
 
-public class AdminCreeazaTort extends AppCompatActivity
-{
+public class AdminCreeazaTort extends AppCompatActivity {
     ImageButton imageButton;
     Button creazaTort;
     Spinner torturiSpinner;
@@ -57,22 +56,21 @@ public class AdminCreeazaTort extends AppCompatActivity
     FirebaseAuth fAuth;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_creeaza_tort);
 
         storage = FirebaseStorage.getInstance();
         storageReference = storage.getReference();
-        torturiSpinner = (Spinner)findViewById(R.id.torturi);
-        desc = (TextInputLayout)findViewById(R.id.descriere);
-        cant = (TextInputLayout)findViewById(R.id.cantitate);
-        prt = (TextInputLayout)findViewById(R.id.pret);
-        creazaTort = (Button)findViewById(R.id.creaza);
+        torturiSpinner = (Spinner) findViewById(R.id.torturi);
+        desc = (TextInputLayout) findViewById(R.id.descriere);
+        cant = (TextInputLayout) findViewById(R.id.cantitate);
+        prt = (TextInputLayout) findViewById(R.id.pret);
+        creazaTort = (Button) findViewById(R.id.creaza);
         fAuth = FirebaseAuth.getInstance();
         databaseReference = firebaseDatabase.getInstance().getReference("DetaliiTorturi");
 
-        try{
+        try {
             String userid = FirebaseAuth.getInstance().getCurrentUser().getUid();
             data = firebaseDatabase.getInstance().getReference("Admin").child(userid);
 
@@ -96,7 +94,7 @@ public class AdminCreeazaTort extends AppCompatActivity
                             cantitate = cant.getEditText().getText().toString().trim();
                             pret = prt.getEditText().getText().toString().trim();
 
-                            if(isValid()){
+                            if (isValid()) {
                                 uploadImage();
                             }
                         }
@@ -108,17 +106,14 @@ public class AdminCreeazaTort extends AppCompatActivity
 
                 }
             });
-
-
-        }catch(Exception e){
+        } catch (Exception e) {
             Log.e("Eroare: ", e.getMessage());
         }
-
     }
 
     private void uploadImage() {
 
-        if(imageuri != null){
+        if (imageuri != null) {
             final ProgressDialog progressDialog = new ProgressDialog(AdminCreeazaTort.this);
             progressDialog.setTitle("Se incarca...");
             progressDialog.show();
@@ -135,8 +130,8 @@ public class AdminCreeazaTort extends AppCompatActivity
                                     descriere, String.valueOf(uri), randomUID, adminId);
                             firebaseDatabase.getInstance().getReference("DetaliiTorturi")
                                     .child(FirebaseAuth.getInstance()
-                                    .getCurrentUser().getUid()).child(randomUID).
-                                    setValue(info).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                            .getCurrentUser().getUid()).child(randomUID)
+                                    .setValue(info).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     progressDialog.dismiss();
@@ -157,18 +152,16 @@ public class AdminCreeazaTort extends AppCompatActivity
             }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onProgress(@NonNull UploadTask.TaskSnapshot snapshot) {
-                    double progress = (100.0*snapshot.getBytesTransferred()/
+                    double progress = (100.0 * snapshot.getBytesTransferred() /
                             snapshot.getTotalByteCount());
-                    progressDialog.setMessage("Incarcat " + (int)progress +("%"));
+                    progressDialog.setMessage("Incarcat " + (int) progress + ("%"));
                     progressDialog.setCanceledOnTouchOutside(false);
                 }
             });
         }
-
     }
 
-    private boolean isValid()
-    {
+    private boolean isValid() {
         desc.setErrorEnabled(false);
         desc.setError("");
         cant.setErrorEnabled(false);
@@ -179,63 +172,49 @@ public class AdminCreeazaTort extends AppCompatActivity
         boolean isValidDescription = false, isValidPrice = false, isValidQuantity = false,
                 isValid = false;
 
-        if(TextUtils.isEmpty(descriere))
-        {
+        if (TextUtils.isEmpty(descriere)) {
             desc.setErrorEnabled(true);
             desc.setError("Va rugam scrieti descrierea produsului!");
-        }
-        else
-        {
+        } else {
             desc.setError(null);
             isValidDescription = true;
         }
 
-        if(TextUtils.isEmpty(cantitate))
-        {
+        if (TextUtils.isEmpty(cantitate)) {
             cant.setErrorEnabled(true);
             cant.setError("Va rugam setati cantitatea produsului!");
-        }
-        else
-        {
+        } else {
             cant.setError(null);
             isValidQuantity = true;
         }
 
-        if(TextUtils.isEmpty(pret))
-        {
+        if (TextUtils.isEmpty(pret)) {
             prt.setErrorEnabled(true);
             prt.setError("Va rugam setati pretul unitar al produsului!");
-        }
-        else
-        {
+        } else {
             prt.setError(null);
             isValidPrice = true;
         }
-
         return isValidDescription && isValidQuantity && isValidPrice;
     }
 
-    private void startCropImageActivity(Uri imageuri)
-    {
+    private void startCropImageActivity(Uri imageuri) {
         CropImage.activity(imageuri)
                 .setGuidelines(CropImageView.Guidelines.ON)
                 .setMultiTouchEnabled(true)
                 .start(this);
     }
 
-    private void onSelectImageClick(View v){
+    private void onSelectImageClick(View v) {
         CropImage.startPickImageActivity(this);
     }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (mcropimageuri != null && grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED)
-        {
+        if (mcropimageuri != null && grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
             startCropImageActivity(mcropimageuri);
-        }
-        else
-        {
+        } else {
             Toast.makeText(this, "Operatie anulata! A fost refuzat accesul.", Toast.LENGTH_SHORT).show();
         }
     }
@@ -243,32 +222,26 @@ public class AdminCreeazaTort extends AppCompatActivity
     @Override
     @SuppressLint("NewApi")
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-
-        if (requestCode == CropImage.PICK_IMAGE_CHOOSER_REQUEST_CODE && resultCode == Activity.RESULT_OK)
-        {
+        if (requestCode == CropImage.PICK_IMAGE_CHOOSER_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
             imageuri = CropImage.getPickImageResultUri(this, data);
-            if (CropImage.isReadExternalStoragePermissionsRequired(this, imageuri))
-            {
+            if (CropImage.isReadExternalStoragePermissionsRequired(this, imageuri)) {
                 mcropimageuri = imageuri;
                 requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
                         0);
-            }
-            else
-            {
+            } else {
                 startCropImageActivity(imageuri);
             }
         }
 
-        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE){
+        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
             CropImage.ActivityResult result = CropImage.getActivityResult(data);
-            if (resultCode == RESULT_OK){
-                ((ImageButton)findViewById(R.id.image_upload)).setImageURI((result.getUri()));
-                Toast.makeText(this,"Decuparea a fost realizata cu succes!", Toast.LENGTH_SHORT).show();
-            }else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE){
+            if (resultCode == RESULT_OK) {
+                ((ImageButton) findViewById(R.id.image_upload)).setImageURI((result.getUri()));
+                Toast.makeText(this, "Decuparea a fost realizata cu succes!", Toast.LENGTH_SHORT).show();
+            } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
                 Toast.makeText(this, "Decupare esuata: " + result.getError(), Toast.LENGTH_SHORT).show();
             }
         }
-
         super.onActivityResult(requestCode, resultCode, data);
     }
 }

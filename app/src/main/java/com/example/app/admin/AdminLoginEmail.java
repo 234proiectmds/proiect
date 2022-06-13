@@ -58,7 +58,6 @@ public class AdminLoginEmail extends AppCompatActivity {
                                 Intent intent = new Intent(AdminLoginEmail.this, AdminTablouNavigatie.class);
                                 startActivity(intent);
                                 finish();
-
                             } else {
                                 MesajAlerta.ShowAlert(AdminLoginEmail.this, "Email neverificat", "Emailul nu este verificat");
                             }
@@ -67,7 +66,6 @@ public class AdminLoginEmail extends AppCompatActivity {
                             MesajAlerta.ShowAlert(AdminLoginEmail.this, "Error", task.getException().getMessage());
                         }
                     });
-
                 }
             });
             signup.setOnClickListener(v -> {
@@ -116,6 +114,6 @@ public class AdminLoginEmail extends AppCompatActivity {
 
             isvalidpass = true;
         }
-        return (isvalidemail && isvalidpass) ? true : false;
+        return isvalidemail && isvalidpass;
     }
 }

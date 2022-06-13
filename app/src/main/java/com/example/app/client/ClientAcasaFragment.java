@@ -71,7 +71,6 @@ public class ClientAcasaFragment extends Fragment implements SwipeRefreshLayout.
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
-
                     }
                 });
             }

@@ -50,23 +50,22 @@ public class AdminVerificareTelefon extends AppCompatActivity {
 
         sendVerificationCode(phoneNumber);
 
-
         verify.setOnClickListener(v -> {
             String code = enterCode.getText().toString().trim();
             resend.setVisibility(View.INVISIBLE);
-            if(code.isEmpty() && code.length()<6){
+            if (code.length() == 0) {
                 enterCode.setError("Enter code");
                 enterCode.requestFocus();
                 return;
             }
-        verifyCode(code);
+            verifyCode(code);
         });
 
-        new CountDownTimer(60000,1000){
+        new CountDownTimer(60000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 txt.setVisibility(View.VISIBLE);
-                txt.setText("Retrimit codul in " + millisUntilFinished/1000 +" secunde");
+                txt.setText("Retrimit codul in " + millisUntilFinished / 1000 + " secunde");
             }
 
             @Override
@@ -90,7 +89,6 @@ public class AdminVerificareTelefon extends AppCompatActivity {
     }
 
     private void sendVerificationCode(String phoneNumber) {
-
         PhoneAuthOptions options =
                 PhoneAuthOptions.newBuilder(FAuth)
                         .setPhoneNumber(phoneNumber)
@@ -106,7 +104,7 @@ public class AdminVerificareTelefon extends AppCompatActivity {
         @Override
         public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
             String code = phoneAuthCredential.getSmsCode();
-            if (code !=  null){
+            if (code != null) {
                 enterCode.setText(code);
                 verifyCode(code);
             }
@@ -114,12 +112,12 @@ public class AdminVerificareTelefon extends AppCompatActivity {
 
         @Override
         public void onVerificationFailed(@NonNull FirebaseException e) {
-            Toast.makeText(AdminVerificareTelefon.this,e.getMessage(),Toast.LENGTH_LONG).show();
+            Toast.makeText(AdminVerificareTelefon.this, e.getMessage(), Toast.LENGTH_LONG).show();
         }
 
         @Override
-        public void onCodeSent(String s , PhoneAuthProvider.ForceResendingToken forceResendingToken){
-            super.onCodeSent(s,forceResendingToken);
+        public void onCodeSent(String s, PhoneAuthProvider.ForceResendingToken forceResendingToken) {
+            super.onCodeSent(s, forceResendingToken);
             codVerificare = s;
         }
     };
@@ -132,17 +130,17 @@ public class AdminVerificareTelefon extends AppCompatActivity {
     private void linkCredential(PhoneAuthCredential credential) {
         FAuth.getCurrentUser().linkWithCredential(credential).
                 addOnCompleteListener(AdminVerificareTelefon.this, new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful()){
-                    Intent intent = new Intent(AdminVerificareTelefon.this, MainMenu.class);
-                    startActivity(intent);
-                    finish();
-                }else{
-                    MesajAlerta.ShowAlert(AdminVerificareTelefon.this,"Error",task.getException().getMessage());
-                }
-            }
-        });
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            Intent intent = new Intent(AdminVerificareTelefon.this, MainMenu.class);
+                            startActivity(intent);
+                            finish();
+                        } else {
+                            MesajAlerta.ShowAlert(AdminVerificareTelefon.this, "Error", task.getException().getMessage());
+                        }
+                    }
+                });
     }
 
 }

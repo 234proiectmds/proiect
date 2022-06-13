@@ -53,7 +53,7 @@ public class ClientTrimiteOtp extends AppCompatActivity {
         verify.setOnClickListener(v -> {
             String code = enterCode.getText().toString().trim();
             resend.setVisibility(View.INVISIBLE);
-            if (code.isEmpty() && code.length() < 6) {
+            if (code.length() == 0) {
                 enterCode.setError("Enter code");
                 enterCode.requestFocus();
                 return;
@@ -90,7 +90,6 @@ public class ClientTrimiteOtp extends AppCompatActivity {
     }
 
     private void sendVerificationCode(String phoneNumber) {
-
         PhoneAuthOptions options =
                 PhoneAuthOptions.newBuilder(FAuth)
                         .setPhoneNumber(phoneNumber)
@@ -103,7 +102,6 @@ public class ClientTrimiteOtp extends AppCompatActivity {
     }
 
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mcallBack = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-
         @Override
         public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
             String code = phoneAuthCredential.getSmsCode();

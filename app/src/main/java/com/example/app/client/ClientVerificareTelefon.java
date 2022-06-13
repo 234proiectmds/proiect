@@ -27,7 +27,6 @@ import com.google.firebase.auth.PhoneAuthProvider;
 import java.util.concurrent.TimeUnit;
 
 public class ClientVerificareTelefon extends AppCompatActivity {
-
     String codVerificare;
     FirebaseAuth FAuth;
     Button verify, resend;
@@ -54,7 +53,7 @@ public class ClientVerificareTelefon extends AppCompatActivity {
         verify.setOnClickListener(v -> {
             String code = enterCode.getText().toString().trim();
             resend.setVisibility(View.INVISIBLE);
-            if (code.isEmpty() && code.length() < 6) {
+            if (code.length() == 0) {
                 enterCode.setError("Enter code");
                 enterCode.requestFocus();
                 return;

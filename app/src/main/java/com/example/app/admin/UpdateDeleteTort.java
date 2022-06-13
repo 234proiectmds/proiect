@@ -146,7 +146,6 @@ public class UpdateDeleteTort extends AppCompatActivity {
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
-
                     }
                 });
                 FAuth = FirebaseAuth.getInstance();
@@ -163,9 +162,7 @@ public class UpdateDeleteTort extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
             }
-
         });
     }
 
@@ -279,7 +276,6 @@ public class UpdateDeleteTort extends AppCompatActivity {
     @Override
     @SuppressLint("NewApi")
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-
         if (requestCode == CropImage.PICK_IMAGE_CHOOSER_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
             imageuri = CropImage.getPickImageResultUri(this, data);
             if (CropImage.isReadExternalStoragePermissionsRequired(this, imageuri)) {
@@ -300,7 +296,6 @@ public class UpdateDeleteTort extends AppCompatActivity {
                 Toast.makeText(this, "Decupare esuata: " + result.getError(), Toast.LENGTH_SHORT).show();
             }
         }
-
         super.onActivityResult(requestCode, resultCode, data);
     }
 }

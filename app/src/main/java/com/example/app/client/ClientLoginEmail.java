@@ -52,24 +52,20 @@ public class ClientLoginEmail extends AppCompatActivity {
                     Fauth.signInWithEmailAndPassword(emailid, pwd).addOnCompleteListener(task -> {
                         if (task.isSuccessful()) {
                             mDialog.dismiss();
-
                             if (Fauth.getCurrentUser().isEmailVerified()) {
                                 mDialog.dismiss();
                                 Toast.makeText(ClientLoginEmail.this, "Bine ai venit in cont!", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(ClientLoginEmail.this, ClientTablouNavigare.class);
                                 startActivity(intent);
                                 finish();
-
                             } else {
                                 MesajAlerta.ShowAlert(ClientLoginEmail.this, "Email neverificat", "Emailul nu este verificat");
-
                             }
                         } else {
                             mDialog.dismiss();
                             MesajAlerta.ShowAlert(ClientLoginEmail.this, "Error", task.getException().getMessage());
                         }
                     });
-
                 }
             });
             signup.setOnClickListener(v -> {
@@ -118,6 +114,6 @@ public class ClientLoginEmail extends AppCompatActivity {
 
             isvalidpass = true;
         }
-        return (isvalidemail && isvalidpass) ? true : false;
+        return isvalidemail && isvalidpass;
     }
 }

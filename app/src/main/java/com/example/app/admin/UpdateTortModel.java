@@ -1,12 +1,9 @@
 package com.example.app.admin;
 
-public class UpdateTortModel
-{
+public class UpdateTortModel {
     public String torturi, cantitate, pret, descriere, imageURL, randomUID, admID;
 
-    public UpdateTortModel()
-    {
-
+    public UpdateTortModel() {
     }
 
     public String getTorturi() {

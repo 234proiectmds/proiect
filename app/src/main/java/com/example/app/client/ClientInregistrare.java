@@ -201,6 +201,7 @@ public class ClientInregistrare extends AppCompatActivity {
     String emailPattern = "[a-zA-Z0-9._]+@[a-z]+\\.+[a-z]+";
     String lastNamePattern = "([A-Z][a-z]*)([\\s\\\'-][A-Z][a-z]*)*";
     String firstNamePattern = "([A-Z][a-z]*)([\\s\\\'-][A-Z][a-z]*)*";
+    String passwordPattern = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$";
 
     public boolean isValid(){
         Email.setErrorEnabled(false);
@@ -276,11 +277,15 @@ public class ClientInregistrare extends AppCompatActivity {
             Password.setErrorEnabled(true);
             Password.setError("Creati o parola. Aceasta nu poate lipsi.");
         }else{
-            if(password.length()<8){
-                Password.setErrorEnabled(true);
-                Password.setError("Parola dvs. este slaba. Creati o parola care are cel putin 8 caractere.");
+            if(password.matches(passwordPattern))
+            {
+                isValidePassword = true;
             }
-            isValidePassword = true;
+            else
+            {
+                Password.setErrorEnabled(true);
+                Password.setError("Parola dvs. este slaba. Creati o parola care are cel putin 8 caractere (cel putin o litera si o cifra).");
+            }
         }
 //              check confirm password
         if(TextUtils.isEmpty(confirmPassword)){

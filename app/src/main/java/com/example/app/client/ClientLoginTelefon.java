@@ -45,7 +45,7 @@ public class ClientLoginTelefon extends AppCompatActivity {
             finish();
         });
         signinemail.setOnClickListener(v -> {
-            startActivity(new Intent(ClientLoginTelefon.this, ClientInregistrare.class));
+            startActivity(new Intent(ClientLoginTelefon.this, ClientLoginEmail.class));
             finish();
         });
     }

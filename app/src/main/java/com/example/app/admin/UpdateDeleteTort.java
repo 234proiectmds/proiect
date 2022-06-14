@@ -290,7 +290,7 @@ public class UpdateDeleteTort extends AppCompatActivity {
         if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
             CropImage.ActivityResult result = CropImage.getActivityResult(data);
             if (resultCode == RESULT_OK) {
-                ((ImageButton) findViewById(R.id.image_upload)).setImageURI((result.getUri()));
+                ((ImageButton) findViewById(R.id.imageupload)).setImageURI((result.getUri()));
                 Toast.makeText(this, "Decuparea a fost realizata cu succes!" + result.getSampleSize(), Toast.LENGTH_SHORT).show();
             } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
                 Toast.makeText(this, "Decupare esuata: " + result.getError(), Toast.LENGTH_SHORT).show();
